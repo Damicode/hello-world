@@ -162,6 +162,19 @@
     </pluginManagement>
   </build>
 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-43-156.ec2.internal-releases</name>
+        <url>http://3.86.46.87:8082/artifactory/maven-artifactory-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>ip-172-31-43-156.ec2.internal-snapshots</name>
+        <url>http://3.86.46.87:8082/artifactory/maven-artifactory-local</url>
+    </snapshotRepository>
+</distributionManagement>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
