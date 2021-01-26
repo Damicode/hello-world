@@ -17,9 +17,9 @@ pipeline {
 	      steps {
           
            
-       dir('java-source'){
+ 
             sh "mvn package"
-          }
+ 
           
         }
          
@@ -30,10 +30,10 @@ pipeline {
               withSonarQubeEnv('sonar') {
                 
 				
-           	dir('java-source'){
+ 
                  sh 'mvn -U clean install sonar:sonar'
                 
-                }
+ 
                 
 				
               }
@@ -70,7 +70,7 @@ pipeline {
             steps {
                 rtMavenRun (
                     tool: "maven", // Tool name from Jenkins configuration
-                    pom: 'java-source/pom.xml',
+                    pom: 'pom.xml',
                     goals: '-U clean install',
                     deployerId: "MAVEN_DEPLOYER",
                     resolverId: "MAVEN_RESOLVER"
