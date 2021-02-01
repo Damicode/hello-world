@@ -47,18 +47,11 @@ pipeline {
  
 
  
-    }
+
 
  
 
-    stage('Waiting for Approvals') {
-            
-        steps{
-
-				input('Test Completed ? Please provide  Approvals for Prod Release ?')
-			  }
-            
-    }     
+   
 
 
  
